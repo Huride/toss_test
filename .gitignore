@@ -1,0 +1,14 @@
+# Secrets & local state
+.env
+.token_cache.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
