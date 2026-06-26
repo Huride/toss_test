@@ -23,9 +23,15 @@
 백테스트 하네스는 외부 키/네트워크 없이 합성 데이터로 바로 검증 가능:
 
 ```bash
-python -m backtest.run_backtest                 # 기본 데모
+python -m backtest.run_backtest                 # 돈치안 단일 전략 데모
 python -m backtest.run_backtest --days 1000 --ai-gate
+python -m backtest.run_quant                    # 멀티 전략(추세·모멘텀·페어) 비교 + 상관/분산효과
 ```
+
+멀티 전략 프레임워크: ① 돈치안 추세(`engine`) · ② 통계적 페어(`quant.PairsMeanReversion`) ·
+③ 크로스섹셔널 모멘텀(`quant.CrossSectionalMomentum`)을 역변동성으로 결합.
+토스는 현물 롱온리라 **옵션·선물 거래/무위험 차익은 불가** — 파생 정보는 외부 데이터로
+받아 신호로만 활용한다(상세: `docs/strategy.md` 4-B/4-C).
 
 > 합성 데이터 결과는 하네스 검증용일 뿐 수익성 근거가 아닙니다.
 > 다음 단계는 토스 일봉(`/candles` 페이지네이션) 실데이터 연동 → 파라미터 튜닝입니다.
