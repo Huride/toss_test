@@ -13,6 +13,7 @@
 | `poc_readonly.py` | PoC 실행 스크립트 (조회 리포트 출력) |
 | `.env.example` | 환경변수 템플릿 |
 | `docs/strategy.md` | 전략 설계 문서 (미국주식 스윙: 돈치안 돌파 + 뉴스/AI 오버레이) |
+| `docs/CONTINUE.md` | 이어서 작업하기 가이드 (clone·세팅·실행·IP 허용 문제 해결) |
 | `backtest/` | 백테스트 하네스 (가격 코어 우선, 뉴스/AI 플러그형) |
 
 ## 전략 / 백테스트
